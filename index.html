@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- main heading -->
+     <h1>To-Do</h1>
+     <!-- add to-do section start -->
+      <div class="inputsec">
+        <input type="text" class="addToDoinput" placeholder="Enter your task here...">
+        <input type="date" class="duedate">
+        <button class="addorupdate" onclick="addOrUpdateToDo()">Add To-Do</button>
+        <button class="clearbtn" onclick="deleteAllToDos()">Clear All To-Dos</button>
+      </div>
+      <!-- add to-do section end -->
+       <!-- status check section start -->
+        <div class="statusdiv">
+        <button class="all" onclick="filterToDos('all')">All</button>
+        <button class="pending" onclick="filterToDos('pending')">Pending</button>
+        <button class="completed" onclick="filterToDos('completed')">Completed</button>
+        </div>
+        <!-- status check section end -->
+
+        <!-- error handling section start -->
+         <div class="alert-box" id="alert"></div>
+         <!-- error handling section end -->
+        
+
+
+        <!-- table section start -->
+         <div class="tablediv">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th class="to-do">To-Do</th>
+                    <th class="date">Due-date</th>
+                    <th class="status">Satus</th>
+                    <th class="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+         </table>
+         </div>
+         <!-- table section end -->
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

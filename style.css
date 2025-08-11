@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+}
+
+.inputsec{
+    margin-bottom: 20px;
+}
+
+.inputsec input[type="text"],
+.inputsec input[type="date"]{
+    padding:10px;
+    margin:5px;
+    width:200px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+
+
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.clearbtn {
+  background-color: #dc3545;
+}
+
+.clearbtn:hover {
+  background-color: #b02a37;
+}
+
+.completed {
+  background-color: #198754;
+}
+
+.completed:hover {
+  background-color: #146c43;
+}
+
+.pending {
+  background-color: #ffc107;
+  color: black;
+}
+
+.pending:hover {
+  background-color: #e0a800;
+}
+
+.all {
+  background-color: #6c757d;
+}
+
+.all:hover {
+  background-color: #5a6268;
+}
+
+/* Table styling */
+.tablediv {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 90%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.table td {
+  color: #444;
+}
+
+.table button {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+}
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .inputsec input,
+  .inputsec button {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+.to-do, .date, .status, .actions {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.alert-box{
+    width:90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    color:white;
+    font-weight:bold;
+    text-align: center;
+    display:none;
+}
+
+/* Alert types */
+.alert-info {
+  background-color: #17a2b8;
+}
+
+.alert-success {
+  background-color: #28a745;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+}
+
+/* Show alert (remove this to hide) */
+.alert-box.show {
+  display: block;
+}
+
+/* Optional: Smooth fade-in/out (optional) */
+.alert-box {
+  transition: opacity 0.3s ease;
+}
